@@ -10,7 +10,7 @@ void func(int* i){
 }
 
 int main(){
-    func(NULL);
+    // func(NULL);
     func(nullptr);
     return 0;
 }
