@@ -22,6 +22,7 @@ int main(){
 
     auto address = reinterpret_cast<std::uintptr_t>(ptr);
     std::cout << address << std::endl;
+    // Performs compile time conversions on non-related types
     
     return 0;
 }
