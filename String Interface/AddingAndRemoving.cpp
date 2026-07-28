@@ -14,5 +14,16 @@ int main(){
     auto last2 = end(str3);
     str3.insert(last2, 2, 'l'); // (offset, what we are adding)
     std::cout << str3 << std::endl;
+
+    std::string str4{"hello"};
+    auto first = begin(str4);
+    str4.erase(first);
+    std::cout << str4 << std::endl;
+
+    auto gdx = str4.find("o");
+    if(gdx != std::string::npos){
+        str4.replace(gdx, 5, "Goodbye");
+    }
+    std::cout << str4 << std::endl;
     return 0;
 }
