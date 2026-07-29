@@ -3,9 +3,13 @@
 
 bool string_equal(const std::string& string1, const std::string& string2){
     if(string1.size() != string2.size()) return false;
-    while(auto it != cend(string1) && auto it != cend(string2)){
-        
+    auto lit = cbegin(string1);
+    auto rit = cbegin(string2);
+    while(lit != cend(string1) && rit != cend(string2)){
+        if(toupper(*lit) != toupper(*rit)) return false;
+        ++lit; ++rit;
     }
+    return true;
 }
 
 
@@ -26,5 +30,6 @@ int main(){
         }
         
     }
+    std::cout << string_equal("Hello Wrld!","Hello World!") << std::endl;
     return 0;
 }
