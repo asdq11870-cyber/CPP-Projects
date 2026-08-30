@@ -6,3 +6,8 @@
 
 # Temporary files
 *tempcodeRunnerFile.cpp
+
+# Other folders
+Files & Streams/
+Review/
+String Interface/
