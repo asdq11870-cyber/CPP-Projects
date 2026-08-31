@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
+
+const double g = 9.81;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode({200, 200}), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode({1920, 1080}), "My Version of Level Devil!");
 
     while (window.isOpen())
     {
@@ -14,8 +15,23 @@ int main()
                 window.close();
         }
 
-        window.clear();
-        window.draw(shape);
         window.display();
     }
 }
+
+class Player{
+private:
+    std::vector<double> position{0.0 , 0.0};
+    std::vector<int> size{100,100};
+    std::vector<double> velocity{0.0, 0.0};
+    bool isAlive{false};
+
+    void movement();
+    void jumping();
+
+public:
+
+    
+
+
+};
