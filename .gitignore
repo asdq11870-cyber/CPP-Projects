@@ -1,4 +1,5 @@
-# Executable Files
+# Executable and O files
+*.o
 *.exe
 
 # VS Code
